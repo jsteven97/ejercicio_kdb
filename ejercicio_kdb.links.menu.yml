@@ -1,0 +1,12 @@
+ejercicio_kdb.admin:
+  title: 'Ejercicio KDB'
+  description: 'List and manage Ejercicio KDB entities'
+  route_name: ejercicio_kdb.admin
+  parent: system.admin_content
+  weight: 100
+
+entity.ejercicio_kdb.settings:
+  title: 'Ejercicio KDB'
+  description: 'Configure Ejercicio KDB entity type'
+  route_name: entity.ejercicio_kdb.settings
+  parent: system.admin_structure

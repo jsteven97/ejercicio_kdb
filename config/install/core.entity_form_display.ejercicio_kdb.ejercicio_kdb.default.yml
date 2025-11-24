@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ejercicio_kdb
+id: ejercicio_kdb.ejercicio_kdb.default
+targetEntityType: ejercicio_kdb
+bundle: ejercicio_kdb
+mode: default
+content:
+  dato_1:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  dato_2:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  etiqueta:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+hidden: {  }

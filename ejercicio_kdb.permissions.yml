@@ -1,0 +1,20 @@
+administer ejercicio_kdb entities:
+  title: 'Administer Ejercicio KDB entities'
+  description: 'Allow to administer Ejercicio KDB entities'
+  restrict access: true
+
+view ejercicio_kdb entities:
+  title: 'View Ejercicio KDB entities'
+  description: 'Allow to view Ejercicio KDB entities'
+
+create ejercicio_kdb entities:
+  title: 'Create Ejercicio KDB entities'
+  description: 'Allow to create Ejercicio KDB entities'
+
+edit ejercicio_kdb entities:
+  title: 'Edit Ejercicio KDB entities'
+  description: 'Allow to edit Ejercicio KDB entities'
+
+delete ejercicio_kdb entities:
+  title: 'Delete Ejercicio KDB entities'
+  description: 'Allow to delete Ejercicio KDB entities'

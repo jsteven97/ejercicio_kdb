@@ -1,0 +1,47 @@
+ejercicio_kdb.admin:
+  path: '/admin/content/ejercicio-kdb'
+  defaults:
+    _entity_list: 'ejercicio_kdb'
+    _title: 'Ejercicio KDB'
+  requirements:
+    _permission: 'view ejercicio_kdb entities'
+
+entity.ejercicio_kdb.settings:
+  path: '/admin/structure/ejercicio-kdb/settings'
+  defaults:
+    _form: '\Drupal\ejercicio_kdb\Form\EjercicioKdbSettingsForm'
+    _title: 'Ejercicio KDB settings'
+  requirements:
+    _permission: 'administer ejercicio_kdb entities'
+
+entity.ejercicio_kdb.canonical:
+  path: '/ejercicio-kdb/{ejercicio_kdb}'
+  defaults:
+    _entity_view: 'ejercicio_kdb.full'
+    _title_callback: '\Drupal\ejercicio_kdb\Controller\EjercicioKdbController::title'
+  requirements:
+    _permission: 'view ejercicio_kdb entities'
+
+entity.ejercicio_kdb.add_form:
+  path: '/ejercicio-kdb/add'
+  defaults:
+    _entity_form: 'ejercicio_kdb.add'
+    _title: 'Add Ejercicio KDB'
+  requirements:
+    _permission: 'create ejercicio_kdb entities'
+
+entity.ejercicio_kdb.edit_form:
+  path: '/ejercicio-kdb/{ejercicio_kdb}/edit'
+  defaults:
+    _entity_form: 'ejercicio_kdb.edit'
+    _title: 'Edit Ejercicio KDB'
+  requirements:
+    _permission: 'edit ejercicio_kdb entities'
+
+entity.ejercicio_kdb.delete_form:
+  path: '/ejercicio-kdb/{ejercicio_kdb}/delete'
+  defaults:
+    _entity_form: 'ejercicio_kdb.delete'
+    _title: 'Delete Ejercicio KDB'
+  requirements:
+    _permission: 'delete ejercicio_kdb entities'

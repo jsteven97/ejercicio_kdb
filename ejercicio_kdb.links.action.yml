@@ -1,0 +1,6 @@
+entity.ejercicio_kdb.add_form:
+  route_name: entity.ejercicio_kdb.add_form
+  title: 'Add Ejercicio KDB'
+  appears_on:
+    - ejercicio_kdb.admin
+    - system.admin_content

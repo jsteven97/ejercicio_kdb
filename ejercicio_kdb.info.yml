@@ -1,0 +1,8 @@
+name: ejercicio_kdb
+type: module
+description: Module create as a test for Kadabra application
+package: Custom
+core_version_requirement: ^9 || ^10 || ^11
+dependencies:
+  - drupal:taxonomy
+  - drupal:views

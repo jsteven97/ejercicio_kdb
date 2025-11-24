@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Ejercicio KDB module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function ejercicio_kdb_schema() {
+  $schema['ejercicio_kdb'] = [
+    'description' => 'Stores Ejercicio KDB entity data.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique entity ID.',
+      ],
+      'uuid' => [
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'description' => 'Unique UUID.',
+      ],
+      'dato_1' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'First integer value.',
+      ],
+      'dato_2' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'Second integer value.',
+      ],
+      'etiqueta' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+        'description' => 'Reference to taxonomy term ID.',
+      ],
+    ],
+    'primary key' => ['id'],
+    'unique keys' => [
+      'uuid' => ['uuid'],
+      'dato_1_dato_2' => ['dato_1', 'dato_2'],
+    ],
+    'indexes' => [
+      'etiqueta' => ['etiqueta'],
+    ],
+  ];
+
+  return $schema;
+}

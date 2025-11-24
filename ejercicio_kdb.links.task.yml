@@ -1,0 +1,32 @@
+entity.ejercicio_kdb.canonical:
+  route_name: entity.ejercicio_kdb.canonical
+  base_route: entity.ejercicio_kdb.canonical
+  title: 'View'
+
+entity.ejercicio_kdb.edit_form:
+  route_name: entity.ejercicio_kdb.edit_form
+  base_route: entity.ejercicio_kdb.canonical
+  title: 'Edit'
+
+entity.ejercicio_kdb.delete_form:
+  route_name: entity.ejercicio_kdb.delete_form
+  base_route: entity.ejercicio_kdb.canonical
+  title: 'Delete'
+  weight: 10
+
+entity.ejercicio_kdb.settings_tasks:
+  route_name: entity.ejercicio_kdb.settings
+  base_route: entity.ejercicio_kdb.settings
+  title: 'Settings'
+
+entity.ejercicio_kdb.field_ui:
+  route_name: entity.entity_form_display.ejercicio_kdb.default
+  base_route: entity.ejercicio_kdb.settings
+  title: 'Manage form display'
+  weight: 1
+
+entity.ejercicio_kdb.field_ui_display:
+  route_name: entity.entity_view_display.ejercicio_kdb.default
+  base_route: entity.ejercicio_kdb.settings
+  title: 'Manage display'
+  weight: 2
