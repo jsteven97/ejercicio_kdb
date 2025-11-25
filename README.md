@@ -26,6 +26,13 @@ The module provides extensive Views integration with custom fields, filters, and
 4. Enable the `ejercicio_kdb` module
 5. Clear Drupal cache: `drush cr`
 
+### Configuration Import
+
+The module includes default configuration that is automatically imported during installation. For advanced configuration management, see [CONFIG.md](CONFIG.md).
+
+**Optional configurations**:
+- Example view at `/ejercicio-kdb/kdb` (requires Views module)
+
 ## Usage
 
 ### Permissions
@@ -137,9 +144,12 @@ Sort entities by their Resultado value in descending order to show the highest c
 ```
 ejercicio_kdb/
 ├── config/
-│   └── install/
-│       ├── core.entity_view_display.ejercicio_kdb.ejercicio_kdb.default.yml
-│       └── core.entity_form_display.ejercicio_kdb.ejercicio_kdb.default.yml
+│   ├── install/
+│   │   ├── ejercicio_kdb.settings.yml
+│   │   ├── core.entity_view_display.ejercicio_kdb.ejercicio_kdb.default.yml
+│   │   └── core.entity_form_display.ejercicio_kdb.ejercicio_kdb.default.yml
+│   └── optional/
+│       └── views.view.ejercicio_kdb_results.yml
 ├── src/
 │   ├── Entity/
 │   │   ├── EjercicioKdb.php
@@ -169,7 +179,8 @@ ejercicio_kdb/
 ├── ejercicio_kdb.links.menu.yml
 ├── ejercicio_kdb.links.action.yml
 ├── ejercicio_kdb.links.task.yml
-└── README.md
+├── README.md
+└── CONFIG.md
 ```
 
 ## Technical notes
@@ -214,6 +225,22 @@ The module provides custom Views data through `EjercicioKdbViewsData` class, whi
 Ensure that:
 - Dato 1 and Dato 2 have different values
 - No other entity exists with the same Dato 1 and Dato 2 combination
+
+## Configuration Management
+
+For detailed information about exporting, importing, and managing configuration for this module, see [CONFIG.md](CONFIG.md).
+
+**Quick commands**:
+```bash
+# Export all configuration
+drush config:export
+
+# Import configuration
+drush config:import
+
+# Check configuration status
+drush config:status
+```
 
 ## Support
 
